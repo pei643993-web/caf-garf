@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Гафре — вафли и уют в Таганском парке</title>
+<style>
+:root{--bg:#fff7ec;--card:#fff;--tx:#3a2314;--mut:#6f523c;--ac:#c4571f;--ac2:#a5440f;--ln:#efd9bd;--cream:#fbe9cf;--hero:linear-gradient(150deg,#f2b25f,#d9733a 55%,#7a3a17);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#1e130c;--card:#2a1b11;--tx:#f8e9d6;--mut:#cdb096;--ac:#f0894a;--ac2:#f6b377;--ln:#4a3322;--cream:#34231598;--hero:linear-gradient(150deg,#7a3a17,#4a2510 60%,#26130a)}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#1e130c;--card:#2a1b11;--tx:#f8e9d6;--mut:#cdb096;--ac:#f0894a;--ac2:#f6b377;--ln:#4a3322;--cream:#34231598;--hero:linear-gradient(150deg,#7a3a17,#4a2510 60%,#26130a)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(64px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;margin:0}
+a{color:var(--ac2)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--ln)}
+nav{max-width:1080px;margin:auto;display:flex;align-items:center;gap:14px;padding:10px 16px;overflow-x:auto;white-space:nowrap}
+nav .logo{font:700 22px Georgia,serif;color:var(--ac);text-decoration:none;margin-right:auto}
+nav a.l{color:var(--tx);text-decoration:none;font-size:15px;padding:6px 4px}
+nav a.l:hover{color:var(--ac)}
+section{max-width:1080px;margin:auto;padding:48px 16px}
+h2{font-size:clamp(26px,5vw,38px);margin-bottom:6px}
+.sub{color:var(--mut);margin:0 0 24px}
+.hero{max-width:none;padding:0}
+.hero .in{max-width:1080px;margin:auto;padding:80px 16px 72px;color:#fff}
+.hero-bg{background:var(--hero);position:relative;overflow:hidden}
+.hero-bg:after{content:"🧇";position:absolute;right:-20px;bottom:-40px;font-size:260px;opacity:.18}
+.hero h1{font-size:clamp(34px,7vw,60px);max-width:680px}
+.hero p{font-size:20px;max-width:560px;margin:14px 0 26px}
+.btn{display:inline-block;border:0;cursor:pointer;font:600 16px system-ui,sans-serif;padding:14px 24px;border-radius:30px;text-decoration:none;margin:4px 8px 4px 0;min-height:48px}
+.b1{background:#fff;color:#a5440f}.b2{background:transparent;color:#fff;border:2px solid #fff}
+.bp{background:var(--ac);color:#fff}.bp:hover{background:var(--ac2)}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;font-size:14px}
+.badges span{background:#ffffff30;padding:6px 12px;border-radius:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:18px;padding:18px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 24px #0002}
+.ph{height:120px;border-radius:12px;background:linear-gradient(135deg,#f6c883,#d9733a);display:flex;align-items:center;justify-content:center;font-size:54px;margin-bottom:12px}
+.card h3{font-size:19px;margin-bottom:4px}.card p{margin:4px 0;color:var(--mut);font-size:15px}
+.meta{font-size:13px;color:var(--mut)}
+.price{font:700 18px system-ui;color:var(--ac2)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:10px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.chip{border:1px solid var(--ln);background:var(--card);color:var(--tx);padding:9px 16px;border-radius:24px;cursor:pointer;font-size:15px;min-height:44px}
+.chip.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.cons{display:grid;grid-template-columns:1.4fr 1fr;gap:20px}
+@media(max-width:760px){.cons{grid-template-columns:1fr}}
+fieldset{border:1px solid var(--ln);border-radius:14px;margin:0 0 14px;padding:12px 14px;background:var(--card)}
+legend{font-weight:700;padding:0 6px;color:var(--ac2)}
+label.o{display:flex;justify-content:space-between;gap:10px;padding:8px 0;cursor:pointer;min-height:44px;align-items:center}
+label.o input{accent-color:var(--ac);width:20px;height:20px;margin-right:8px}
+.plate{position:sticky;top:80px;background:var(--cream);border:1px solid var(--ln);border-radius:18px;padding:20px;text-align:center}
+.stack{font-size:64px;min-height:150px;display:flex;flex-wrap:wrap;gap:4px;justify-content:center;align-items:center}
+.total{font:700 32px Georgia,serif;color:var(--ac2);margin:8px 0}
+.alt{background:var(--cream);max-width:none}.alt>.w{max-width:1080px;margin:auto}
+.car{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}
+.car .ph{flex:0 0 240px;height:200px;scroll-snap-align:start;margin:0;position:relative;font-size:70px}
+.car .ph small{position:absolute;bottom:8px;left:10px;font-size:13px;color:#fff;background:#0006;padding:2px 8px;border-radius:10px}
+.timer{font:700 20px system-ui;color:var(--ac)}
+.tag{display:inline-block;background:var(--ac);color:#fff;font-size:13px;padding:2px 10px;border-radius:12px;margin-bottom:8px}
+input[type=text],input[type=tel],select{width:100%;padding:12px;border:1px solid var(--ln);border-radius:10px;background:var(--bg);color:var(--tx);font-size:16px;margin:4px 0 10px}
+.cart-item{display:flex;justify-content:space-between;gap:8px;padding:8px 0;border-bottom:1px dashed var(--ln)}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;background:var(--ac);color:#fff;border-radius:30px;padding:14px 20px;font-weight:700;text-decoration:none;box-shadow:0 6px 18px #0004}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+footer{background:#3a2314;color:#f3dfc4;padding:32px 16px;text-align:center;font-size:14px}
+footer a{color:#f6b377;margin:0 8px}
+.demo{font-size:13px;color:var(--mut);margin-top:14px}
+</style></head><body>
+<header><nav>
+<a class="logo" href="#top">🧇 Гафре</a>
+<a class="l" href="#build">Конструктор</a><a class="l" href="#menu">Меню</a><a class="l" href="#kids">Атмосфера</a><a class="l" href="#tg">Telegram</a><a class="l" href="#promo">Акции</a><a class="l" href="#about">О нас</a><a class="l" href="#contacts">Контакты</a>
+</nav></header>
+
+<section class="hero hero-bg" id="top"><div class="in">
+<h1>Гафре — вафли и уют в Таганском парке</h1>
+<p>Собери свою вафлю, возьми кофе с собой. Каждый день с 10:00 до 22:00.</p>
+<a class="btn b1" href="#order">Заказать онлайн</a><a class="btn b2" href="#menu">Посмотреть меню</a>
+<div class="badges"><span>★ 5.0 на Яндекс Картах</span><span>☕ Кофе с собой</span><span>🥡 Еда навынос</span><span>🧸 Детская зона</span></div>
+</div></section>
+
+<section id="build" class="rv">
+<h2>Конструктор вафли</h2><p class="sub">Выберите основу, топпинги и соусы. Цена считается сразу.</p>
+<div class="cons"><div id="opts"></div>
+<div class="plate"><div class="stack" id="stack"></div><div id="sum" class="meta"></div><div class="total" id="tot">0 ₽</div>
+<button class="btn bp" id="addb">В корзину</button></div></div>
+<p class="demo">Цены и состав в этом макете примерные, их заменят актуальными из меню кафе.</p>
+</section>
+
+<section id="menu" class="alt rv"><div class="w">
+<h2>Меню</h2><p class="sub">Выберите категорию или отфильтруйте по диете.</p>
+<div class="chips" id="cats"></div><div class="chips" id="diet"></div>
+<div class="grid" id="mgrid"></div>
+<p class="demo">Блюда, состав, вес и цены в макете примерные. Аллергены нужно подтвердить у кафе.</p>
+</div></section>
+
+<section id="kids" class="rv">
+<h2>Атмосфера и детская зона</h2><p class="sub">Место, куда хочется зайти после прогулки по парку.</p>
+<div class="grid">
+<div class="card"><div class="ph">🪟</div><h3>Уютный зал</h3><p>Тёплый свет, чистота и приветливый персонал.</p></div>
+<div class="card"><div class="ph">🧸</div><h3>Игрушки для малышей</h3><p>Пока вы пьёте кофе, дети заняты делом.</p></div>
+<div class="card"><div class="ph">📚</div><h3>Детские книги</h3><p>Спокойный уголок после активных игр.</p></div>
+<div class="card"><div class="ph">🌳</div><h3>Рядом парк</h3><p>Прогулка, потом вафля. Или наоборот.</p></div>
+</div></section>
+
+<section id="tg" class="alt rv"><div class="w">
+<h2>Из Telegram-канала</h2><p class="sub">Так выглядит наш день — больше кадров в Telegram.</p>
+<div class="car"><div class="ph">🧇<small>Гости</small></div><div class="ph">👩‍🍳<small>Сборка вафли</small></div><div class="ph">☕<small>Кофе</small></div><div class="ph">🍂<small>Сезонные новинки</small></div><div class="ph">🎈<small>Моменты дня</small></div></div>
+<a class="btn bp" href="https://t.me/gaufre_msk">Открыть канал</a>
+<p class="demo">В макете стоят заглушки. Здесь будут реальные фото из канала.</p>
+</div></section>
+
+<section id="promo" class="rv">
+<h2>Акции и комбо</h2><p class="sub">Выгодные сочетания для вас и для семьи.</p>
+<div class="grid">
+<div class="card"><span class="tag">−15%</span><h3>Вафля + кофе</h3><p>Любая вафля и кофе со скидкой.</p><div class="timer" data-t="week"></div></div>
+<div class="card"><span class="tag">Для детей</span><h3>Детский сет</h3><p>Мини-вафля, сок и сюрприз.</p></div>
+<div class="card"><span class="tag">Утро</span><h3>Завтрак в парке</h3><p>Вафля и чай до полудня.</p><div class="timer" data-t="noon"></div></div>
+</div>
+<p class="demo">Условия акций пример. Таймер считает до конца текущей недели или до полудня.</p>
+</section>
+
+<section id="about" class="alt rv"><div class="w">
+<h2>О нас</h2>
+<p class="sub">Гафре — небольшое кафе в Таганском парке: вафли на любой вкус, кофе и чай, еда навынос.</p>
+<div class="grid">
+<div class="card"><div class="ph">★</div><h3>Рейтинг 5.0</h3><p>Более 340 отзывов на Яндекс Картах.</p><a href="https://yandex.ru/maps/org/213971834707">Читать отзывы</a></div>
+<div class="card"><h3>«Тыквенный суп впечатлил»</h3><p>Татьяна О., 6 октября</p></div>
+<div class="card"><h3>«Можно собрать самому»</h3><p>Андрей Ерёмин, 30 августа</p></div>
+<div class="card"><h3>«Есть игрушки и книги для детей»</h3><p>Алексей К., 2 ноября</p></div>
+</div></div></section>
+
+<section id="order" class="rv">
+<h2>Предзаказ</h2><p class="sub">Соберите заказ и заберите его без очереди.</p>
+<div class="cons"><div class="card"><div id="cart"></div><div class="total" id="ctot">0 ₽</div></div>
+<div class="card"><label>Имя<input type="text" id="nm" placeholder="Как вас зовут"></label>
+<label>Телефон<input type="tel" id="ph" placeholder="+7"></label>
+<label>Время<select id="tm"><option>Как можно скорее</option><option>Через 15 минут</option><option>Через 30 минут</option><option>Через час</option></select></label>
+<button class="btn bp" id="send">Отправить предзаказ</button><div id="msg" class="meta"></div></div></div>
+<p class="demo">В макете заявка никуда не отправляется. В рабочей версии она придёт в Telegram или на почту кафе.</p>
+</section>
+
+<section id="contacts" class="alt rv"><div class="w">
+<h2>Контакты и локация</h2>
+<div class="grid">
+<div class="card"><h3>Адрес</h3><p>Москва, Таганская улица, 40, стр. 2 (Таганский парк)</p><a class="btn bp" href="https://yandex.ru/maps/org/213971834707">Открыть карту</a></div>
+<div class="card"><h3>Часы работы</h3><p>Ежедневно 10:00–22:00</p><h3 style="margin-top:12px">Телефон</h3><p><a href="tel:+79686090360">+7 968 609-03-60</a></p></div>
+<div class="card"><h3>Как дойти</h3><p>Ближайшие станции метро: Таганская и Марксистская. Дальше через Таганский парк.</p></div>
+</div></div></section>
+
+<footer><div><a href="https://t.me/gaufre_msk">Telegram</a><a href="https://vk.ru/gaufre_msk">VK</a><a href="https://taplink.cc/gaufre">Taplink</a><a href="https://2gis.ru/moscow/firm/70000001088207156">2ГИС</a></div>
+<p>Политика конфиденциальности · © Гафре. Пробный макет сайта.</p></footer>
+<a class="fab" href="#order" id="fab">🛒 <span id="cnt">0</span> · <span id="ft">0 ₽</span></a>
+
+<script>
+var $=function(i){return document.getElementById(i)};
+var B=[["Классическая",220,"🧇"],["Цельнозерновая",250,"🌾"],["Безглютеновая",280,"✨"]];
+var T=[["Банан",60,"🍌"],["Клубника",90,"🍓"],["Орехи",80,"🥜"],["Ягоды",100,"🫐"],["Сыр",70,"🧀"],["Ветчина",90,"🥓"]];
+var S=[["Шоколад",40,"🍫"],["Карамель",40,"🍯"],["Сметана",30,"🥛"]];
+var X=[["Взбитые сливки",50,"☁️"],["Мороженое",80,"🍨"]];
+var st={b:0,t:[],s:[],x:[]},cart=[];
+function grp(id,title,arr,type,key){var h='<fieldset><legend>'+title+'</legend>';arr.forEach(function(o,i){h+='<label class="o"><span><input type="'+type+'" name="'+key+'" data-k="'+key+'" value="'+i+'"'+(type=="radio"&&i==0?' checked':'')+'>'+o[2]+' '+o[0]+'</span><b>'+o[1]+' ₽</b></label>'});return h+'</fieldset>'}
+$("opts").innerHTML=grp("b","1. Основа",B,"radio","b")+grp("t","2. Топпинги",T,"checkbox","t")+grp("s","3. Соусы",S,"checkbox","s")+grp("x","4. Добавки",X,"checkbox","x");
+function calc(){st.b=+document.querySelector('input[name=b]:checked').value;["t","s","x"].forEach(function(k){st[k]=[].slice.call(document.querySelectorAll('input[data-k='+k+']:checked')).map(function(e){return +e.value})});
+var p=B[st.b][1],ic=B[st.b][2],nm=[B[st.b][0]];
+[["t",T],["s",S],["x",X]].forEach(function(g){st[g[0]].forEach(function(i){p+=g[1][i][1];ic+=g[1][i][2];nm.push(g[1][i][0])})});
+$("stack").textContent=ic;$("sum").textContent=nm.join(", ");$("tot").textContent=p+" ₽";return [nm.join(", "),p]}
+$("opts").addEventListener("change",calc);calc();
+$("addb").onclick=function(){var r=calc();add("Вафля: "+r[0],r[1])};
+var M=[["Вафля с бананом и карамелью","w","🍌","Хрустящая вафля, банан, карамель","Тесто, банан, карамель","молоко, яйца, глютен","250 г",290,["v"]],
+["Вафля с ветчиной и сыром","w","🥓","Сытная вафля на обед","Тесто, ветчина, сыр","молоко, яйца, глютен","280 г",330,[]],
+["Безглютеновая вафля с ягодами","w","🫐","Лёгкая вафля с ягодами","Безглютеновая мука, ягоды","яйца","240 г",340,["v","g"]],
+["Капучино","d","☕","Классический кофе с молоком","Эспрессо, молоко","молоко","250 мл",190,["v","g"]],
+["Чай в чайнике","d","🍵","Ароматный чай на выбор","Чай, вода","нет","400 мл",210,["v","g"]],
+["Какао","d","🍫","Горячее какао","Какао, молоко","молоко","250 мл",180,["v","g"]],
+["Чизкейк","s","🍰","Нежный десерт","Сыр, печенье","молоко, яйца, глютен","120 г",260,["v"]],
+["Мороженое с ягодами","s","🍨","Освежающий десерт","Мороженое, ягоды","молоко","100 г",200,["v","g"]],
+["Мини-вафля","k","🧸","Порция для малыша","Тесто, мёд","молоко, яйца, глютен","120 г",190,["v"]],
+["Детский сок","k","🧃","Натуральный сок","Яблоко","нет","200 мл",120,["v","g"]]];
+var C=[["a","Все"],["w","Вафли"],["d","Напитки"],["s","Десерты"],["k","Для детей"]],D=[["a","Любые"],["v","Вегетарианское"],["g","Без глютена"]],fc="a",fd="a";
+function chips(el,arr,get,set){$(el).innerHTML=arr.map(function(c){return '<button class="chip'+(get()==c[0]?' on':'')+'" data-v="'+c[0]+'">'+c[1]+'</button>'}).join("");[].forEach.call($(el).children,function(b){b.onclick=function(){set(b.dataset.v);draw()}})}
+function draw(){chips("cats",C,function(){return fc},function(v){fc=v});chips("diet",D,function(){return fd},function(v){fd=v});
+$("mgrid").innerHTML=M.map(function(m,i){return(fc=="a"||m[1]==fc)&&(fd=="a"||m[8].indexOf(fd)>=0)?'<div class="card"><div class="ph">'+m[2]+'</div><h3>'+m[0]+'</h3><p>'+m[3]+'</p><div class="meta">Состав: '+m[4]+'<br>Аллергены: '+m[5]+'<br>'+m[6]+'</div><div class="row"><span class="price">'+m[7]+' ₽</span><button class="btn bp" style="margin:0;padding:10px 16px" data-i="'+i+'">Добавить</button></div></div>':''}).join("")||'<p>Ничего не найдено.</p>';
+[].forEach.call($("mgrid").querySelectorAll("button"),function(b){b.onclick=function(){var m=M[b.dataset.i];add(m[0],m[7])}})}
+draw();
+function add(n,p){cart.push([n,p]);rc()}
+function rc(){var t=cart.reduce(function(a,c){return a+c[1]},0);
+$("cart").innerHTML=cart.length?cart.map(function(c,i){return '<div class="cart-item"><span>'+c[0]+'</span><span>'+c[1]+' ₽ <button class="chip" data-d="'+i+'" aria-label="Убрать">✕</button></span></div>'}).join(""):'<p class="meta">Корзина пуста. Добавьте блюда из меню или соберите вафлю.</p>';
+[].forEach.call($("cart").querySelectorAll("button"),function(b){b.onclick=function(){cart.splice(b.dataset.d,1);rc()}});
+$("ctot").textContent=t+" ₽";$("ft").textContent=t+" ₽";$("cnt").textContent=cart.length}
+rc();
+$("send").onclick=function(){var m=$("msg");if(!cart.length){m.textContent="Сначала добавьте что-нибудь в корзину.";return}
+if(!$("nm").value||!$("ph").value){m.textContent="Укажите имя и телефон.";return}
+m.textContent="Спасибо, "+$("nm").value+"! Это демо: в рабочей версии заказ уйдёт в кафе. Время: "+$("tm").value+"."}
+function tick(){var n=new Date();document.querySelectorAll(".timer").forEach(function(e){var end=new Date(n);if(e.dataset.t=="noon"){end.setHours(12,0,0,0);if(end<=n)end.setDate(end.getDate()+1)}else{end.setDate(n.getDate()+((7-n.getDay())%7));end.setHours(23,59,59,0)}
+var s=Math.max(0,Math.floor((end-n)/1000)),d=Math.floor(s/86400),h=Math.floor(s%86400/3600),mi=Math.floor(s%3600/60);e.textContent="⏱ Осталось: "+(d?d+" д ":"")+h+" ч "+mi+" мин"})}
+tick();setInterval(tick,30000);
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll(".rv").forEach(function(e){io.observe(e)});
+</script></body></html>
